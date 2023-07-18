@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-Product</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/light-box.css">
+</head>
+<body>
+    <header>
+        <div class="mobile-cont">
+
+            <div class="hamburger">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+            </div>
+        
+            <aside class="sidebar">
+                    <ul class="menu">
+                        <li><a href="">Collections</a></li>
+                        <li><a href="">Men</a></li>
+                        <li><a href="">Women</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+            </aside>
+        </div>
+        <nav class="nav-main">
+           
+            <div class="nav-logo">
+                <div class="img-logo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <ul>
+                    <li><a href="">Collections</a></li>
+                    <li><a href="">Men</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-cart">
+                <div class="cart-btn">
+                    <button onclick="openCart()"><img src="img/icon-cart.svg" alt=""></button>
+                </div>
+                <div class="cartd-img">
+                    <img class="avatar" src="img/image-avatar.png" alt="">
+                </div>
+            </div>
+           
+        </nav>
+        <div class="cart-cont">
+            <div class="cart-title">
+                <h3>Cart</h3>
+                <button onclick="closeCart()"><img src="img/icon-close.svg" alt=""></button>
+            </div>
+            <div class="msg-cart">
+                <p>Your cart is empty.</p>
+            </div>
+            
+            <div class="cart-card">
+                <div class="cart-img">
+                    <img src="img/image-product-1-thumbnail.jpg" alt="">
+                </div>
+                <div class="cart-descriprion">
+                    <div class="desc-cont">
+                        <p>Fall Limited Edition Sneakers</p>
+                        <h4>$ <span id="cart-price">125.00</span></h4>
+                        <p>quant (<span id="quant">1</span>)</p>
+                    </div>
+                    <div class="btn-delete">
+                        <button onclick="removeCart()"><img src="img/icon-delete.svg" alt=""></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <button class="checkout">Checkout</button>
+        </div>
+    </header>
+
+    <section class="product">
+        <div class="product-cont">
+            <div class="slider">
+                <div class="slides">
+
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class="slide first">
+                        <img src="img/image-product-1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="img/image-product-2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="img/image-product-3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="img/image-product-4.jpg" alt="">
+                    </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"><img src="img/image-product-1-thumbnail.jpg" alt=""></div>
+                        <div class="auto-btn2"><img src="img/image-product-2-thumbnail.jpg" alt=""></div>
+                        <div class="auto-btn3"><img src="img/image-product-3-thumbnail.jpg" alt=""></div>
+                        <div class="auto-btn4"><img src="img/image-product-4-thumbnail.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+
+            <div class="slider-m">
+                <div class="slider-m-cont">
+                    <button class="arrow-left control"><img src="img/icon-previous.svg" alt=""></button>
+                    <button class="arrow-rigth control"><img src="img/icon-next.svg" alt=""></button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <div class="gallery-img">
+                                <img class="item current-item" src="img/image-product-1.jpg" alt="">
+                            </div>
+                            <div class="gallery-img">
+                                <img class="item" src="img/image-product-2.jpg" alt="">
+                            </div>
+                            <div class="gallery-img">
+                                <img class="item" src="img/image-product-3.jpg" alt="">
+                            </div>
+                            <div class="gallery-img">
+                                <img class="item" src="img/image-product-4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description-p">
+                <h5>Sneaker Company</h5>
+                <h2>Fall Limited Edition Sneakers</h2>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <div class="price">
+                    <h3>$125.00</h3>
+                    <h6> <span class="bg">50%</span></h6>
+                </div>
+                <p><s>$250.00</s></p>
+                <div class="add-cont">
+                    <div class="minus-plus">
+                        <button onclick="countMinus()" id="minus"><img src="img/icon-minus.svg" alt=""></button>
+                        <p id="value">1</p>
+                        <button onclick="countPlus()"  id="plus"><img src="img/icon-plus.svg" alt=""></button>
+                    </div>
+                    <div class="btn-add">
+                        <button onclick="addCart()"><img src="img/icon-cart.svg" alt="">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="light-box">
+        <div class="light-box-cont">
+            <div class="slider-l">
+                <button onclick="closeLb()" class="lb-close"><img src="img/icon-close.svg" alt=""></button>
+                <div class="slides-l">
+
+                    <input type="radio" name="radio-btn" id="r1">
+                    <input type="radio" name="radio-btn" id="r2">
+                    <input type="radio" name="radio-btn" id="r3">
+                    <input type="radio" name="radio-btn" id="r4">
+
+                    <div class="slide-l first-l">
+                        <img src="img/image-product-1.jpg" alt="">
+                    </div>
+                    <div class="slide-l">
+                        <img src="img/image-product-2.jpg" alt="">
+                    </div>
+                    <div class="slide-l">
+                        <img src="img/image-product-3.jpg" alt="">
+                    </div>
+                    <div class="slide-l">
+                        <img src="img/image-product-4.jpg" alt="">
+                    </div>
+                    <div class="navigation-auto-l">
+                        <div class="auto-btn-l1"><img src="img/image-product-1-thumbnail.jpg" alt=""></div>
+                        <div class="auto-btn-l2"><img src="img/image-product-2-thumbnail.jpg" alt=""></div>
+                        <div class="auto-btn-l3"><img src="img/image-product-3-thumbnail.jpg" alt=""></div>
+                        <div class="auto-btn-l4"><img src="img/image-product-4-thumbnail.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="manual-navigation-l">
+                    <label for="r1" class="manual-btn-l"></label>
+                    <label for="r2" class="manual-btn-l"></label>
+                    <label for="r3" class="manual-btn-l"></label>
+                    <label for="r4" class="manual-btn-l"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
