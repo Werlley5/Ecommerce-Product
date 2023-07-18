@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --color-1: hsl(26, 100%, 55%);
+    --color-2: hsl(25, 100%, 94%);
+    --color-3: hsl(220, 13%, 13%);
+    --color-4: hsl(219, 9%, 45%);
+    --color-5: hsl(220, 14%, 75%);
+    --color-6: hsl(223, 64%, 98%);
+    --color-7: hsl(0, 0%, 100%);
+    --color-8: hsl(0, 0%, 0%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans';
+}
+
+.cart-cont {
+    display: none;
+    position: absolute;
+    right: 5%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.397);
+    background-color: var(--color-7);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+.msg-cart {
+    padding: 50px;
+    text-align: center;
+}
+
+.msg-cart p {
+    color: var(--color-4);
+}
+
+.cart-card {
+    width: 100%;
+    display: none;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.cart-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-5);
+    padding: 20px 10px;
+}
+
+.cart-title button {
+    border: none;
+    background-color: var(--color-7);
+    cursor: pointer;
+}
+
+.cart-img {
+    margin-right: 10px;
+}
+
+.cart-img img {
+    width: 60px;
+    border-radius: 5px;
+}
+
+.cart-descriprion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-descriprion h4 {
+    color: var(--color-8);
+    margin-top: 5px;
+}
+
+.bold {
+    font-weight: bold;
+    color: var(--color-8);
+}
+
+.cart-descriprion p {
+    color: var(--color-4);
+}
+
+.btn-delete button {
+    border: none;
+    background-color: var(--color-7);
+    cursor: pointer;
+}
+
+.checkout {
+    width: 90%;
+    height: 50px;
+    background-color: var(--color-1);
+    color: var(--color-7);
+    border-radius: 8px;
+    border: none;
+    margin-left: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+/*classes js*/
+
+.open {
+    display: block;
+}
+
+.add {
+    display: flex;
+}
+
+/*----------------------------------*/
+
+@media(max-width: 768px) {
+
+    .cart-cont {
+        display: none;
+        position: absolute;
+        right: 3%;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.397);
+        background-color: var(--color-7);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 3;
+        width: 95%;
+    }
+
+/*classes js*/
+
+    .open {
+        display: block;
+    }
+
+    .add {
+        display: flex;
+    }
+
+/*----------------------------------*/
+
+}
